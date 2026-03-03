@@ -65,3 +65,17 @@ npm start
 python app.py
 
 ---
+
+## Visuals & Prototype
+
+### System Architecture
+![SmartMine Architecture](docs/architecture.png)
+
+### Dashboard Simulation
+![Dashboard Screenshot](docs/dashboard_screenshot.png)
+
+### Mobile App Mockup
+![Mobile App](docs/mobile_mockup.png)
+
+### Prototype Video (Optional)
+[Watch the Prototype Video](docs/video_demo.mp4)
