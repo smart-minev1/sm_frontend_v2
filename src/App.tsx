@@ -222,9 +222,20 @@ const LandingPage = ({ onGetStarted }) => {
   const previewRef = useRef(null);
   const [activePreviewTab, setActivePreviewTab] = useState('Dashboard');
   const [activeModal, setActiveModal] = useState(null);
+  const [showContactForm, setShowContactForm] = useState(false);
+  const [contactFormData, setContactFormData] = useState({ name: '', email: '', message: '' });
 
   const scrollToPreview = () => {
     previewRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleContactSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here (e.g., send to API)
+    console.log('Contact form submitted:', contactFormData);
+    alert('Thank you for reaching out! We will get back to you soon.');
+    setShowContactForm(false);
+    setContactFormData({ name: '', email: '', message: '' });
   };
 
   const previewTabs = [
@@ -245,6 +256,7 @@ const LandingPage = ({ onGetStarted }) => {
             <div className="text-2xl font-serif">SMART<span className="text-[#D4AF37]">MINE</span></div>
           </div>
           <div className="hidden md:flex items-center gap-8">
+            <a href="#about" className="text-sm text-gray-400 hover:text-[#D4AF37] transition-colors">About</a>
             <a href="#innovations" className="text-sm text-gray-400 hover:text-[#D4AF37] transition-colors">Innovations</a>
             <a href="#preview" className="text-sm text-gray-400 hover:text-[#D4AF37] transition-colors">Platform</a>
             <a href="#faq" className="text-sm text-gray-400 hover:text-[#D4AF37] transition-colors">FAQ</a>
@@ -273,6 +285,131 @@ const LandingPage = ({ onGetStarted }) => {
               <Button variant="outline" onClick={scrollToPreview}>View Platform Demo</Button>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section id="about" className="py-24 bg-[#0E1117] relative overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-2 mb-6">
+                <div className="h-[1px] w-12 bg-[#D4AF37]" />
+                <span className="text-[#D4AF37] tracking-[0.3em] uppercase text-sm font-bold">About SmartMine</span>
+                <div className="h-[1px] w-12 bg-[#D4AF37]" />
+              </div>
+              <h2 className="text-5xl font-serif text-white mb-6">Transforming Mining Safety in Rwanda</h2>
+              <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
+                Rwanda's pioneering intelligent mining safety platform. Combining IoT sensors, AI, and real-time monitoring to protect lives underground.
+              </p>
+            </div>
+
+            {/* Challenge & Solution Flow */}
+            <div className="relative mb-20">
+              <div className="flex flex-col items-center gap-8 max-w-2xl mx-auto">
+                <Card className="p-8 group hover:border-[#D4AF37]/40 transition-all w-full">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-14 h-14 rounded-xl bg-[linear-gradient(135deg,#D4AF37,transparent)] p-[1px] mb-6">
+                      <div className="w-full h-full bg-[#0B0E14] rounded-xl flex items-center justify-center text-[#D4AF37]">
+                        <AlertTriangle size={24} />
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-[#D4AF37] transition-colors">The Challenge</h3>
+                    <p className="text-gray-400 leading-relaxed max-w-lg mx-auto">
+                      Traditional mining safety methods are reactive. Gas leaks and structural failures often go undetected until it's too late.
+                    </p>
+                  </div>
+                </Card>
+
+                <motion.div 
+                  animate={{ y: [0, 10, 0] }} 
+                  transition={{ repeat: Infinity, duration: 2 }}
+                  className="text-[#D4AF37] rotate-90"
+                >
+                  <ArrowRight size={48} />
+                </motion.div>
+
+                <Card className="p-8 group hover:border-[#D4AF37]/40 transition-all w-full">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-14 h-14 rounded-xl bg-[linear-gradient(135deg,#D4AF37,transparent)] p-[1px] mb-6">
+                      <div className="w-full h-full bg-[#0B0E14] rounded-xl flex items-center justify-center text-[#D4AF37]">
+                        <Shield size={24} />
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-[#D4AF37] transition-colors">Our Solution</h3>
+                    <p className="text-gray-400 leading-relaxed max-w-lg mx-auto">
+                      AI-powered IoT sensors monitor conditions 24/7. We predict hazards hours before they become critical, saving lives proactively.
+                    </p>
+                  </div>
+                </Card>
+              </div>
+            </div>
+
+            {/* What SmartMine Offers */}
+            <div className="text-center mb-12 mt-32">
+              <h3 className="text-3xl font-serif text-[#D4AF37] mb-4">What SmartMine Offers</h3>
+              <p className="text-gray-500 max-w-2xl mx-auto">Comprehensive safety solutions designed for the modern mining industry</p>
+            </div>
+
+            <div className="space-y-12 max-w-4xl mx-auto">
+              {/* First Item - Left Aligned */}
+              <div className="flex items-center gap-8">
+                <Card className="p-8 group hover:border-[#D4AF37]/40 transition-all flex-1">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 rounded-xl bg-[linear-gradient(135deg,#D4AF37,transparent)] p-[1px] flex-shrink-0">
+                      <div className="w-full h-full bg-[#0B0E14] rounded-xl flex items-center justify-center text-[#D4AF37]">
+                        <Activity size={28} />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-xl text-white mb-3 group-hover:text-[#D4AF37] transition-colors">Real-Time Monitoring</h4>
+                      <p className="text-gray-400 text-sm leading-relaxed">24/7 surveillance of all critical safety parameters across every mine zone with instant alerts</p>
+                    </div>
+                  </div>
+                </Card>
+                <div className="hidden md:block w-px h-24 bg-[#D4AF37]/20"></div>
+                <div className="hidden md:block flex-1"></div>
+              </div>
+
+              {/* Second Item - Right Aligned */}
+              <div className="flex items-center gap-8">
+                <div className="hidden md:block flex-1"></div>
+                <div className="hidden md:block w-px h-24 bg-[#D4AF37]/20"></div>
+                <Card className="p-8 group hover:border-[#D4AF37]/40 transition-all flex-1">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 rounded-xl bg-[linear-gradient(135deg,#D4AF37,transparent)] p-[1px] flex-shrink-0">
+                      <div className="w-full h-full bg-[#0B0E14] rounded-xl flex items-center justify-center text-[#D4AF37]">
+                        <TrendingUp size={28} />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-xl text-white mb-3 group-hover:text-[#D4AF37] transition-colors">AI Risk Prediction</h4>
+                      <p className="text-gray-400 text-sm leading-relaxed">Machine learning models that forecast incidents before they happen, saving lives proactively</p>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+
+              {/* Third Item - Left Aligned */}
+              <div className="flex items-center gap-8">
+                <Card className="p-8 group hover:border-[#D4AF37]/40 transition-all flex-1">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 rounded-xl bg-[linear-gradient(135deg,#D4AF37,transparent)] p-[1px] flex-shrink-0">
+                      <div className="w-full h-full bg-[#0B0E14] rounded-xl flex items-center justify-center text-[#D4AF37]">
+                        <Users size={28} />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-xl text-white mb-3 group-hover:text-[#D4AF37] transition-colors">Worker Safety</h4>
+                      <p className="text-gray-400 text-sm leading-relaxed">Live tracking and instant emergency alerts for all underground personnel with precision location</p>
+                    </div>
+                  </div>
+                </Card>
+                <div className="hidden md:block w-px h-24 bg-[#D4AF37]/20"></div>
+                <div className="hidden md:block flex-1"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -437,7 +574,7 @@ const LandingPage = ({ onGetStarted }) => {
           <h2 className="text-5xl font-serif mb-8">Ready to make mining safer and smarter?</h2>
           <div className="flex flex-wrap justify-center gap-4">
             <Button onClick={() => onGetStarted('register')} className="px-12 py-4 text-lg">Get Started Now</Button>
-            <Button variant="outline" className="px-12 py-4 text-lg">Contact SmartMine Team</Button>
+            <Button variant="outline" className="px-12 py-4 text-lg" onClick={() => setShowContactForm(true)}>Contact SmartMine Team</Button>
           </div>
         </div>
       </section>
@@ -510,7 +647,7 @@ const LandingPage = ({ onGetStarted }) => {
                 </li>
               </ul>
               <div>
-                <Button variant="outline" className="w-full py-2 text-xs">Request Demo</Button>
+                <Button variant="outline" className="w-full py-2 text-xs" onClick={() => setShowContactForm(true)}>Request Demo</Button>
               </div>
             </div>
           </div>
@@ -605,6 +742,52 @@ const LandingPage = ({ onGetStarted }) => {
 
           <Button className="w-full" onClick={() => setActiveModal(null)}>Dismiss Technical Detail</Button>
         </div>
+      </Modal>
+
+      {/* Contact Form Modal */}
+      <Modal isOpen={showContactForm} onClose={() => setShowContactForm(false)} title="Get In Touch">
+        <form onSubmit={handleContactSubmit} className="space-y-6">
+          <div>
+            <label className="block text-sm font-bold text-[#D4AF37] mb-2 uppercase tracking-widest">Full Name</label>
+            <input
+              type="text"
+              required
+              value={contactFormData.name}
+              onChange={(e) => setContactFormData({ ...contactFormData, name: e.target.value })}
+              className="w-full px-4 py-3 bg-[#0B0E14] border border-[#D4AF37]/20 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-[#D4AF37] transition-colors"
+              placeholder="Enter your full name"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-bold text-[#D4AF37] mb-2 uppercase tracking-widest">Email Address</label>
+            <input
+              type="email"
+              required
+              value={contactFormData.email}
+              onChange={(e) => setContactFormData({ ...contactFormData, email: e.target.value })}
+              className="w-full px-4 py-3 bg-[#0B0E14] border border-[#D4AF37]/20 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-[#D4AF37] transition-colors"
+              placeholder="your.email@example.com"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-bold text-[#D4AF37] mb-2 uppercase tracking-widest">Message</label>
+            <textarea
+              required
+              value={contactFormData.message}
+              onChange={(e) => setContactFormData({ ...contactFormData, message: e.target.value })}
+              rows={5}
+              className="w-full px-4 py-3 bg-[#0B0E14] border border-[#D4AF37]/20 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-[#D4AF37] transition-colors resize-none"
+              placeholder="Tell us about your mining operation or request a demo..."
+            />
+          </div>
+
+          <div className="flex gap-4">
+            <Button type="submit" className="flex-1">Send Message</Button>
+            <Button type="button" variant="outline" onClick={() => setShowContactForm(false)} className="flex-1">Cancel</Button>
+          </div>
+        </form>
       </Modal>
     </div>
   );
