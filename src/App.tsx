@@ -50,6 +50,7 @@ import {
   Pie
 } from 'recharts';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
+import logoImage from '/logo.png';
 
 // --- Theme Constants ---
 const COLORS = {
@@ -252,7 +253,7 @@ const LandingPage = ({ onGetStarted }) => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0B0E14]/80 backdrop-blur-md border-b border-[#D4AF37]/10 px-6 py-4">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <img src="/assets/sm_logo.png" alt="SmartMine Logo" className="h-8 w-8 object-contain" />
+            <img src={logoImage} alt="SmartMine Logo" className="h-8 w-8 object-contain" />
             <div className="text-2xl font-serif">SMART<span className="text-[#D4AF37]">MINE</span></div>
           </div>
           <div className="hidden md:flex items-center gap-8">
@@ -586,7 +587,7 @@ const LandingPage = ({ onGetStarted }) => {
             {/* Brand Section */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img src="/assets/sm_logo.png" alt="SmartMine Logo" className="h-10 w-10 object-contain" />
+                <img src={logoImage} alt="SmartMine Logo" className="h-10 w-10 object-contain" />
                 <div className="text-2xl font-serif">SMART<span className="text-[#D4AF37]">MINE</span></div>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed mb-4">
