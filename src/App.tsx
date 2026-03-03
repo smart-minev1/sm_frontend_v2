@@ -754,7 +754,7 @@ const LandingPage = ({ onGetStarted }) => {
               required
               value={contactFormData.name}
               onChange={(e) => setContactFormData({ ...contactFormData, name: e.target.value })}
-              className="w-full px-4 py-3 bg-[#0B0E14] border border-[#D4AF37]/20 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-[#D4AF37] transition-colors"
+              className="w-full px-4 py-3 bg-[#0B0E14] border border-[#D4AF37]/20 rounded-xl text-white placeholder-white focus:outline-none focus:border-[#D4AF37] transition-colors"
               placeholder="Enter your full name"
             />
           </div>
@@ -766,7 +766,7 @@ const LandingPage = ({ onGetStarted }) => {
               required
               value={contactFormData.email}
               onChange={(e) => setContactFormData({ ...contactFormData, email: e.target.value })}
-              className="w-full px-4 py-3 bg-[#0B0E14] border border-[#D4AF37]/20 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-[#D4AF37] transition-colors"
+              className="w-full px-4 py-3 bg-[#0B0E14] border border-[#D4AF37]/20 rounded-xl text-white placeholder-white focus:outline-none focus:border-[#D4AF37] transition-colors"
               placeholder="your.email@example.com"
             />
           </div>
@@ -778,7 +778,7 @@ const LandingPage = ({ onGetStarted }) => {
               value={contactFormData.message}
               onChange={(e) => setContactFormData({ ...contactFormData, message: e.target.value })}
               rows={5}
-              className="w-full px-4 py-3 bg-[#0B0E14] border border-[#D4AF37]/20 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-[#D4AF37] transition-colors resize-none"
+              className="w-full px-4 py-3 bg-[#0B0E14] border border-[#D4AF37]/20 rounded-xl text-white placeholder-white focus:outline-none focus:border-[#D4AF37] transition-colors resize-none"
               placeholder="Tell us about your mining operation or request a demo..."
             />
           </div>
@@ -1307,18 +1307,18 @@ const AuthPage = ({ mode, onSwitch, onLogin }) => {
             <AnimatePresence mode="wait">
               {mode === 'register' && (
                 <motion.div key="reg" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="space-y-4 overflow-hidden">
-                  <input type="text" className="w-full bg-black/40 border border-[#D4AF37]/20 rounded-lg px-4 py-3 focus:border-[#D4AF37] outline-none" placeholder="Full Name" onChange={e => setFormData({...formData, fullName: e.target.value})} />
-                  <select className="w-full bg-black/40 border border-[#D4AF37]/20 rounded-lg px-4 py-3 focus:border-[#D4AF37] outline-none appearance-none" onChange={e => setFormData({...formData, role: e.target.value})}>
+                  <input type="text" className="w-full bg-black/40 border border-[#D4AF37]/20 text-white placeholder-white rounded-lg px-4 py-3 focus:border-[#D4AF37] outline-none" placeholder="Full Name" onChange={e => setFormData({...formData, fullName: e.target.value})} />
+                  <select className="w-full bg-black/40 border border-[#D4AF37]/20 rounded-lg px-4 py-3 focus:border-[#D4AF37] text-white placeholder-white outline-none appearance-none" onChange={e => setFormData({...formData, role: e.target.value})}>
                     <option value="SITE_MANAGER">Site Manager</option>
                     <option value="MANAGING_DIRECTOR">Managing Director</option>
                     <option value="RMB_INSPECTOR">RMB Inspector</option>
                   </select>
-                  <input type="text" className="w-full bg-black/40 border border-[#D4AF37]/20 rounded-lg px-4 py-3 focus:border-[#D4AF37] outline-none" placeholder="Organization" onChange={e => setFormData({...formData, organization: e.target.value})} />
+                  <input type="text" className="w-full bg-black/40 border border-[#D4AF37]/20 text-white placeholder-white rounded-lg px-4 py-3 focus:border-[#D4AF37] outline-none" placeholder="Organization" onChange={e => setFormData({...formData, organization: e.target.value})} />
                 </motion.div>
               )}
             </AnimatePresence>
-            <input type="email" className="w-full bg-black/40 border border-[#D4AF37]/20 rounded-lg px-4 py-3 focus:border-[#D4AF37] outline-none" placeholder="Email" onChange={e => setFormData({...formData, email: e.target.value})} />
-            <input type="password" className="w-full bg-black/40 border border-[#D4AF37]/20 rounded-lg px-4 py-3 focus:border-[#D4AF37] outline-none" placeholder="Password" onChange={e => setFormData({...formData, password: e.target.value})} />
+            <input type="email" className="w-full bg-black/40 border border-[#D4AF37]/20 rounded-lg text-white placeholder-white px-4 py-3 focus:border-[#D4AF37] outline-none" placeholder="Email" onChange={e => setFormData({...formData, email: e.target.value})} />
+            <input type="password" className="w-full bg-black/40 border border-[#D4AF37]/20 text-white placeholder-white rounded-lg px-4 py-3 focus:border-[#D4AF37] outline-none" placeholder="Password" onChange={e => setFormData({...formData, password: e.target.value})} />
             <Button type="submit" className="w-full py-4 mt-4">{mode === 'login' ? 'Authorize Access' : 'Create Account'}</Button>
           </form>
         </Card>
