@@ -53,3 +53,15 @@ SmartMine provides:
 ```bash
 git clone https://github.com/smart-minev1/sm_frontend_v2.git
 cd sm_frontend_v2
+
+# If Node.js
+npm install
+#If Python 
+pip install -r requirements.txt
+
+#Node.js
+npm start
+#Python 
+python app.py
+
+---
