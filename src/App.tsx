@@ -462,7 +462,72 @@ const LandingPage = ({ onGetStarted }) => {
                 <a href="#" className="w-8 h-8 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-all">
                   <Radio size={14} />
                 </a>
-                <a href="#" className=
+                <a href="#" className="w-8 h-8 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-all">
+                  <Shield size={14} />
+                </a>
+              </div>
+            </div>
+
+            {/* Platform Links */}
+            <div>
+              <h4 className="text-[#D4AF37] font-bold text-sm uppercase tracking-widest mb-4">Platform</h4>
+              <ul className="space-y-3">
+                <li><a href="#innovations" className="text-gray-500 hover:text-[#D4AF37] text-sm transition-colors">Innovations</a></li>
+                <li><a href="#preview" className="text-gray-500 hover:text-[#D4AF37] text-sm transition-colors">Dashboard</a></li>
+                <li><a href="#" className="text-gray-500 hover:text-[#D4AF37] text-sm transition-colors">Features</a></li>
+                <li><a href="#" className="text-gray-500 hover:text-[#D4AF37] text-sm transition-colors">Pricing</a></li>
+                <li><a href="#" className="text-gray-500 hover:text-[#D4AF37] text-sm transition-colors">Documentation</a></li>
+              </ul>
+            </div>
+
+            {/* Company Links */}
+            <div>
+              <h4 className="text-[#D4AF37] font-bold text-sm uppercase tracking-widest mb-4">Company</h4>
+              <ul className="space-y-3">
+                <li><a href="#" className="text-gray-500 hover:text-[#D4AF37] text-sm transition-colors">About Us</a></li>
+                <li><a href="#" className="text-gray-500 hover:text-[#D4AF37] text-sm transition-colors">Careers</a></li>
+                <li><a href="#" className="text-gray-500 hover:text-[#D4AF37] text-sm transition-colors">Partners</a></li>
+                <li><a href="#faq" className="text-gray-500 hover:text-[#D4AF37] text-sm transition-colors">FAQ</a></li>
+                <li><a href="#" className="text-gray-500 hover:text-[#D4AF37] text-sm transition-colors">Contact</a></li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h4 className="text-[#D4AF37] font-bold text-sm uppercase tracking-widest mb-4">Get In Touch</h4>
+              <ul className="space-y-3 text-sm text-gray-500 mb-8">
+                <li className="flex items-start gap-2">
+                  <Building2 size={16} className="text-[#D4AF37] mt-0.5 flex-shrink-0" />
+                  <span>Kigali Innovation City, Rwanda</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Globe size={16} className="text-[#D4AF37] mt-0.5 flex-shrink-0" />
+                  <span>info@smartmine.rw</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Radio size={16} className="text-[#D4AF37] mt-0.5 flex-shrink-0" />
+                  <span>+250 788 000 000</span>
+                </li>
+              </ul>
+              <div>
+                <Button variant="outline" className="w-full py-2 text-xs">Request Demo</Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="pt-8 pb-6 border-t border-[#D4AF37]/10 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-xs text-gray-600">
+              © 2026 SmartMine Rwanda. National Mining Intelligence. All rights reserved.
+            </div>
+            <div className="flex gap-6 text-xs text-gray-600">
+              <a href="#" className="hover:text-[#D4AF37] transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-[#D4AF37] transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-[#D4AF37] transition-colors">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
 
       {/* Modals for Innovation Cards */}
       <Modal isOpen={!!activeModal} onClose={() => setActiveModal(null)} title={activeModal?.toUpperCase().replace('_', ' ')}>
