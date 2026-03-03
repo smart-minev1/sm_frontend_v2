@@ -240,7 +240,10 @@ const LandingPage = ({ onGetStarted }) => {
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0B0E14]/80 backdrop-blur-md border-b border-[#D4AF37]/10 px-6 py-4">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="text-2xl font-serif">SMART<span className="text-[#D4AF37]">MINE</span></div>
+          <div className="flex items-center gap-3">
+            <img src="/assets/sm_logo.png" alt="SmartMine Logo" className="h-8 w-8 object-contain" />
+            <div className="text-2xl font-serif">SMART<span className="text-[#D4AF37]">MINE</span></div>
+          </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#innovations" className="text-sm text-gray-400 hover:text-[#D4AF37] transition-colors">Innovations</a>
             <a href="#preview" className="text-sm text-gray-400 hover:text-[#D4AF37] transition-colors">Platform</a>
@@ -440,12 +443,26 @@ const LandingPage = ({ onGetStarted }) => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-[#080A0E] border-t border-[#D4AF37]/10">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="text-2xl font-serif">SMART<span className="text-[#D4AF37]">MINE</span></div>
-          <div className="text-xs text-gray-600">© 2026 SmartMine Rwanda. National Mining Intelligence.</div>
-        </div>
-      </footer>
+      <footer className="py-16 bg-[#080A0E] border-t border-[#D4AF37]/10">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            {/* Brand Section */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <img src="/assets/sm_logo.png" alt="SmartMine Logo" className="h-10 w-10 object-contain" />
+                <div className="text-2xl font-serif">SMART<span className="text-[#D4AF37]">MINE</span></div>
+              </div>
+              <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                Revolutionizing mining safety through AI-powered monitoring and real-time intelligence.
+              </p>
+              <div className="flex gap-3">
+                <a href="#" className="w-8 h-8 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-all">
+                  <Globe size={14} />
+                </a>
+                <a href="#" className="w-8 h-8 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-all">
+                  <Radio size={14} />
+                </a>
+                <a href="#" className=
 
       {/* Modals for Innovation Cards */}
       <Modal isOpen={!!activeModal} onClose={() => setActiveModal(null)} title={activeModal?.toUpperCase().replace('_', ' ')}>
