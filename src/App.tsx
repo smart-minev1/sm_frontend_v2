@@ -249,11 +249,11 @@ const LandingPage = ({ onGetStarted }) => {
   return (
     <div className="bg-[#0B0E14] text-white selection:bg-[#D4AF37]/30">
       {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0B0E14]/80 backdrop-blur-md border-b border-[#D4AF37]/10 px-6 py-4">
+      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-[#D4AF37]/10 px-6 py-4">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <img src="/logo.png" alt="SmartMine Logo" className="h-8 w-8 object-contain" />
-            <div className="text-2xl font-serif">SMART<span className="text-[#D4AF37]">MINE</span></div>
+            <img src="/logo.png" alt="MineLynx Logo" className="h-8 w-8 object-contain" />
+            <div className="text-2xl font-serif">MINE<span className="text-[#D4AF37]">LYNX</span></div>
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#about" className="text-sm text-gray-400 hover:text-[#D4AF37] transition-colors">About</a>
@@ -278,7 +278,7 @@ const LandingPage = ({ onGetStarted }) => {
         <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
             <div className="flex items-center gap-2 mb-6"><div className="h-[1px] w-12 bg-[#D4AF37]" /><span className="text-[#D4AF37] tracking-[0.3em] uppercase text-sm font-bold">The Future of Mining</span></div>
-            <h1 className="text-6xl md:text-8xl font-serif text-white leading-tight mb-8">SMART<span className="text-[#D4AF37]">MINE</span></h1>
+            <h1 className="text-6xl md:text-8xl font-serif text-white leading-tight mb-8">MINE<span className="text-[#D4AF37]">LYNX</span></h1>
             <p className="text-lg text-gray-400 mb-10 max-w-xl leading-relaxed">Real-time safety monitoring, AI-powered risk prediction, and national-level mining oversight. Building a safer future for every worker underground.</p>
             <div className="flex flex-wrap gap-4">
               <Button onClick={() => onGetStarted('register')}>Get Started</Button>
@@ -295,7 +295,7 @@ const LandingPage = ({ onGetStarted }) => {
             <div className="text-center mb-16">
               <div className="flex items-center justify-center gap-2 mb-6">
                 <div className="h-[1px] w-12 bg-[#D4AF37]" />
-                <span className="text-[#D4AF37] tracking-[0.3em] uppercase text-sm font-bold">About SmartMine</span>
+                <span className="text-[#D4AF37] tracking-[0.3em] uppercase text-sm font-bold">About MineLynx</span>
                 <div className="h-[1px] w-12 bg-[#D4AF37]" />
               </div>
               <h2 className="text-5xl font-serif text-white mb-6">Transforming Mining Safety in Rwanda</h2>
@@ -345,9 +345,9 @@ const LandingPage = ({ onGetStarted }) => {
               </div>
             </div>
 
-            {/* What SmartMine Offers */}
-            <div className="text-center mb-12 mt-32">
-              <h3 className="text-3xl font-serif text-[#D4AF37] mb-4">What SmartMine Offers</h3>
+            {/* What MineLynx Offers */}
+            <div className="text-center mb-12 mt-40">
+              <h3 className="text-3xl font-serif text-[#D4AF37] mb-4">What MineLynx Offers</h3>
               <p className="text-gray-500 max-w-2xl mx-auto">Comprehensive safety solutions designed for the modern mining industry</p>
             </div>
 
@@ -559,7 +559,7 @@ const LandingPage = ({ onGetStarted }) => {
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="text-4xl font-serif text-[#D4AF37] text-center mb-16">Frequently Asked Questions</h2>
           <div className="bg-[#0E1117] border border-[#D4AF37]/10 rounded-3xl p-8">
-            <FAQItem question="How does SmartMine improve safety?" answer="SmartMine uses a combination of real-time sensor data and AI risk models to detect seismic anomalies, gas leaks, and worker fatigue before they lead to accidents." />
+            <FAQItem question="How does MineLynx improve safety?" answer="MineLynx uses a combination of real-time sensor data and AI risk models to detect seismic anomalies, gas leaks, and worker fatigue before they lead to accidents." />
             <FAQItem question="Do miners need smartphones?" answer="No. Miners are equipped with ruggedized wearable trackers that communicate directly with site gateways, providing hands-free alerts and location tracking." />
             <FAQItem question="Can inspectors monitor mines remotely?" answer="Yes. The RMB Inspector dashboard allows for 24/7 remote monitoring of every licensed mine in the country with live data feeds." />
             <FAQItem question="What happens if a sensor fails?" answer="The system features a fail-safe diagnostic mode. If a sensor goes offline, an immediate maintenance alert is triggered, and nearby sensors recalibrate to cover the gap." />
@@ -574,7 +574,7 @@ const LandingPage = ({ onGetStarted }) => {
           <h2 className="text-5xl font-serif mb-8">Ready to make mining safer and smarter?</h2>
           <div className="flex flex-wrap justify-center gap-4">
             <Button onClick={() => onGetStarted('register')} className="px-12 py-4 text-lg">Get Started Now</Button>
-            <Button variant="outline" className="px-12 py-4 text-lg" onClick={() => setShowContactForm(true)}>Contact SmartMine Team</Button>
+            <Button variant="outline" className="px-12 py-4 text-lg" onClick={() => setShowContactForm(true)}>Contact MineLynx Team</Button>
           </div>
         </div>
       </section>
@@ -586,8 +586,8 @@ const LandingPage = ({ onGetStarted }) => {
             {/* Brand Section */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img src="/logo.png" alt="SmartMine Logo" className="h-10 w-10 object-contain" />
-                <div className="text-2xl font-serif">SMART<span className="text-[#D4AF37]">MINE</span></div>
+                <img src="/logo.png" alt="MineLynx Logo" className="h-10 w-10 object-contain" />
+                <div className="text-2xl font-serif">MINE<span className="text-[#D4AF37]">LYNX</span></div>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed mb-4">
                 Revolutionizing mining safety through AI-powered monitoring and real-time intelligence.
@@ -639,7 +639,7 @@ const LandingPage = ({ onGetStarted }) => {
                 </li>
                 <li className="flex items-start gap-2">
                   <Globe size={16} className="text-[#D4AF37] mt-0.5 flex-shrink-0" />
-                  <span>info@smartmine.rw</span>
+                  <span>info@minelynx.rw</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Radio size={16} className="text-[#D4AF37] mt-0.5 flex-shrink-0" />
@@ -655,7 +655,7 @@ const LandingPage = ({ onGetStarted }) => {
           {/* Bottom Bar */}
           <div className="pt-8 pb-6 border-t border-[#D4AF37]/10 flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-xs text-gray-600">
-              © 2026 SmartMine Rwanda. National Mining Intelligence. All rights reserved.
+              © 2026 MineLynx Rwanda. National Mining Intelligence. All rights reserved.
             </div>
             <div className="flex gap-6 text-xs text-gray-600">
               <a href="#" className="hover:text-[#D4AF37] transition-colors">Privacy Policy</a>
@@ -736,7 +736,7 @@ const LandingPage = ({ onGetStarted }) => {
                     </motion.div>
                   </motion.div>
                </div>
-               <p className="text-gray-400 text-sm text-center">SmartMine creates a 'Sovereign Safety Layer' over the national mining sector, providing unprecedented transparency and accountability.</p>
+               <p className="text-gray-400 text-sm text-center">MineLynx creates a 'Sovereign Safety Layer' over the national mining sector, providing unprecedented transparency and accountability.</p>
             </div>
           )}
 
@@ -1295,7 +1295,7 @@ const AuthPage = ({ mode, onSwitch, onLogin }) => {
       <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#D4AF37]/5 blur-[120px] rounded-full" />
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-md relative z-10">
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-serif text-white mb-2">SMART<span className="text-[#D4AF37]">MINE</span></h1>
+          <h1 className="text-4xl font-serif text-white mb-2">MINE<span className="text-[#D4AF37]">LYNX</span></h1>
           <p className="text-gray-500 text-sm">Secure Portal Access</p>
         </div>
         <Card className="backdrop-blur-xl bg-[#0E1117]/80">
@@ -1329,7 +1329,7 @@ const AuthPage = ({ mode, onSwitch, onLogin }) => {
 
 // --- App Shell ---
 
-export default function SmartMineApp() {
+export default function MineLynxApp() {
   const [currentPage, setCurrentPage] = useState('landing');
   const [authMode, setAuthMode] = useState('login');
   const [user, setUser] = useState(null);
@@ -1369,8 +1369,8 @@ export default function SmartMineApp() {
       {/* Sidebar */}
       <div className="w-72 bg-[#0E1117] border-r border-[#D4AF37]/10 flex flex-col h-screen fixed left-0 top-0">
         <div className="p-8 border-b border-[#D4AF37]/10 flex items-center gap-3">
-          <div className="w-8 h-8 rounded bg-[#D4AF37] flex items-center justify-center text-black font-serif font-bold">S</div>
-          <h1 className="text-xl font-serif">SMART<span className="text-[#D4AF37]">MINE</span></h1>
+          <div className="w-8 h-8 rounded bg-[#D4AF37] flex items-center justify-center text-black font-serif font-bold">M</div>
+          <h1 className="text-xl font-serif">MINE<span className="text-[#D4AF37]">LYNX</span></h1>
         </div>
         <div className="p-6 flex-1 space-y-2">
           {[
